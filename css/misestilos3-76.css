@@ -1,10 +1,10 @@
-h8 {
+header {
   margin: 30px;
   padding: 15px;
   text-align: center;
   border: 1px solid;
   transform: skew(20deg);
 }
-h8 {
+#titulo {
   font: bold 26px Verdana, sans-serif;
 }
