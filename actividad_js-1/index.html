@@ -1,18 +1,7 @@
 <!-- 
-Ejemplos de hojas de estilo
-
-Se proporciona un conjunto de ejemplos de algunas hojas de estilo (3-72-3-84).  
-
-La actividad consiste en aplicar los estilos proporcionados en una sola página (index.html), además de mostrar el código que genera ese estilo (ver ejemplo 3-6, en la página index.html). 
-
-Las hojas de estilo deberán estar en la carpeta css, como se muestra en el ejemplo, aunque se pueden adecuar para poder ser accesadas por la página index.html. 
-Si no se utilizan con esta estructura (archivos en la carpeta css), se descontarán 2 puntos de la evaluación de la actividad.
-
-Nota: La numeración de los estilos aplicados se deberá de mantener, como se muestra en la página index proporcionada.
-
-La coevaluación que se pide, es un valor entre 0 y 1. Cero (0) significa que el integrante no participó en la actividad y Uno (1) que participó en toda la actividad. 
-
-Los archivos se deberán de entregar, con la misma estructura de archivos proporcionada (carpetas), en un archivo zip llamado eqx-css1.zip, donde x es el nombre del equipo.
+   ** Ejercicio de javascript 1 **
+      Ya he puesto un documento de estilos por si gustan hacer cambios en el color o algo bonito.
+      Necesitaremos aùn que la funcionalidad del documento de javascript sea de ayuda.
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -76,27 +65,34 @@ Los archivos se deberán de entregar, con la misma estructura de archivos propor
       <br>
 
       <div>
-         <form action="#">
-            <fieldset>
-             <legend>Selector de algoritmo:</legend>
-             <label for="fnumber">Número:</label>
-             <input type="text" id="fnumber" name="fname"><br><br>
-             <label for="result">Resultado:</label>
-             <input type="text" id="snumber" name="lname"><br><br>
+         <fieldset>
+          
+            <legend>Selector de algoritmo:</legend>
+            
+            <label for="fnumber">Número:</label>
+            <input type="text" id="fnumber" name="fnumber"><br><br>
+            
+            <label for="algorithm">Algoritmo a calcular:</label>
+            <select name="algoritmos" id="algorithm">
+               <option value="select_an_option">Selecciona un algoritmo</option>
+               <option value="factorial">Factorial</option>
+               <option value="fibonacci">Fibonacci</option>
+               <option value="prime">Primo</option>
+               <option value="perfect">Numero perfecto</option>
+            </select><br><br>
+            <button onclick="numbers()">Calcular</button>
 
-             <label for="algorithm">Algoritmo a calcular:</label>
-             <select name="algoritmos" id="algorithm">
-                  <option value="select_an_option">Selecciona un algoritmo</option>
-                  <option value="factorial">factorial</option>
-                  <option value="fibonacci">Fibonacci</option>
-                  <option value="prime">Primo</option>
-                  <option value="perfect">Numero perfecto</option>
-             </select><br><br>
-
-             <input type="submit" value="Calcular">
-            </fieldset>
-           </form>
+            <label for="result">Resultado:</label>
+            <input type="text" id="result" name="result" value=""><br><br>
+             <!-- Este es un botón -->
+            <br>
+               <p id="info_text">*No olvides llenar ambos campos.</p>
+            <br>
+         </fieldset>
       </div>
 
     </body>
+    <!-- Con esta etiqueta de srcipt estamos ya referenciando el archivo de js que incluí en la carpeta de la actividad_js -->
+    <script src="./script.js"></script>
+
 </html>
