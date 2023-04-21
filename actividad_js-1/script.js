@@ -1,4 +1,3 @@
-// Adivinaron, ya casi está todo aquí
 function numbers() {
     //funciòn para calcular el factorial de un nùmero 
     function factorial (n) {
@@ -11,22 +10,51 @@ function numbers() {
 
     //funciòn para calcular fibonacci de un nùmero 
     function fibonacci (n) {
-        result = "FIB aun no funciona";
-        return result; 
+        let a = 0,
+      b = 1,
+      c;
+    if (n === 0) {
+      return a;
+    }
+    for (let i = 2; i <= n; i++) {
+      c = a + b;
+      a = b;
+      b = c;
+    }
+    return b;
 
     }
 
     //funciòn para saber si un nùmero es primo
     function prime (n) {
-        result = "PRIM aun no funciona";
-        return result; 
+        let isPrime = true;
+    if (n === 1) {
+      isPrime = false;
+    } else {
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+    }
+    return isPrime;
 
     }
 
     //funciòn para saber si un nùmero es perfecto
     function perfect (n) {
-        result = "PERF aun no funciona";
-        return result; 
+        let sum = 0;
+  for (let i = 1; i < n; i++) {
+    if (n % i === 0) {
+      sum += i;
+    }
+  }
+  if (sum === n) {
+    return "El número es perfecto";
+  } else {
+    return "El número no es perfecto";
+  }
 
     }
 
@@ -57,7 +85,7 @@ function numbers() {
                     result = prime(fnumber);
                     break;
                 
-                case "perfect":            
+                case "perfect":
                     result = perfect(fnumber);
                     break;
                 default:
