@@ -21,9 +21,8 @@ $query = mysqli_query($con, $sql);
 
     <header>
         <div class="container">
-            <p class="logo">Admon. de Productos</p>
+            <p class="logo">Admon. de ventas</p>
             <nav>
-
                 <a href="index.html">Home</a>
                 <a href="productos.php">Admon. de productos</a>
                 <a href="ventas.php">Admon. de ventas</a>
@@ -37,8 +36,7 @@ $query = mysqli_query($con, $sql);
     </header>
 
     <section id="hero-prods">
-        <h1>Administracion<br>de productos</h1>
-
+        <h1>Administracion<br>de Ventas</h1>
         <form action="#Crud">
             <button>Continuar</button>
         </form>
@@ -48,9 +46,7 @@ $query = mysqli_query($con, $sql);
         <div class="container">
         </div>
         <div class="products-form">
-            <br>
-            <br>
-            <h2>Agregar Productos</h2>
+            <h2>Administracion de Ventas</h2>
             <br>
             <br>
             <br>

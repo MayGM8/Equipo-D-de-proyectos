@@ -21,9 +21,8 @@ $query = mysqli_query($con, $sql);
 
     <header>
         <div class="container">
-            <p class="logo">Admon. de Productos</p>
+            <p class="logo">Admon. de Clientes</p>
             <nav>
-
                 <a href="index.html">Home</a>
                 <a href="productos.php">Admon. de productos</a>
                 <a href="ventas.php">Admon. de ventas</a>
@@ -36,21 +35,20 @@ $query = mysqli_query($con, $sql);
         </div>
     </header>
 
-    <section id="hero-prods">
-        <h1>Administracion<br>de productos</h1>
+    <section id="hero-clients">
+    
+        <h1>Secciòn en construccion<br>disculpe las molestias...</h1>
 
-        <form action="#Crud">
+        <form action="index.html">
             <button>Continuar</button>
         </form>
     </section>
 
-    <section id="Crud">
+    <!-- <section id="Crud">
         <div class="container">
         </div>
         <div class="products-form">
-            <br>
-            <br>
-            <h2>Agregar Productos</h2>
+            <h1>Administracion de productos</h1>
             <br>
             <br>
             <br>
@@ -86,7 +84,7 @@ $query = mysqli_query($con, $sql);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($row = mysqli_fetch_array($query)): ?>
+                  /*  <?php while ($row = mysqli_fetch_array($query)): ?>
                         <tr>
                             <th><?= $row['id'] ?></th>
                             <th><?= $row['nombre'] ?></th>
@@ -97,12 +95,12 @@ $query = mysqli_query($con, $sql);
                             <th><a href="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
                             <th><a href="delete_user.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php endwhile; ?>/*
                 </tbody>
             </table>
         </div>
 
-    </section>
+    </section> -->
 
 </body>
 

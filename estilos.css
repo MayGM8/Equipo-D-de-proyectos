@@ -95,12 +95,80 @@ header a:hover{
     background-position: center center;
 }
 
-#hero h1{
-    color:white;
+#hero-prods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/prods.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
-
-#hero button {
-    font-size: 1.75em;
+#hero-usrs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/under-construction.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero-ventas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/caja.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero-clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/under-construction.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero, #hero-clients, #hero-prods, #hero-usrs h1{
+    color:white;
+    button{
+        font-size: 1.75em;
+        bottom: 0%;
+    }
 }
 
 #panel-admi .container{
@@ -238,7 +306,7 @@ a{
     text-decoration: none;
 }
 
-.users-form form{
+.products-form form{
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -247,13 +315,13 @@ a{
     text-align: center;
 }
 
-.users-form form input{
+.products-form form input{
     font-family: 'Segoe UI', sans-serif;
 }
 
-.users-form form input[type=text],
-.users-form form input[type=password],
-.users-form form input[type=email]{
+.products-form form input[type=text],
+.products-form form input[type=password],
+.products-form form input[type=email]{
     padding: 8px;
     border:2px solid #aaa;
     border-radius:4px;
@@ -261,14 +329,14 @@ a{
     transition:.3s;
 }
 
-.users-form form input[type=text]:focus,
-.users-form form input[type=password]:focus,
-.users-form form input[type=password]:focus{
+.products-form form input[type=text]:focus,
+.products-form form input[type=password]:focus,
+.products-form form input[type=password]:focus{
     border-color:dodgerBlue;
     box-shadow:0 0 6px 0 dodgerBlue;
 }
 
-.users-form form input[type=submit]{
+.products-form form input[type=submit]{
     border: none;
     padding: 12px 50px;
     text-decoration: none;
@@ -280,12 +348,12 @@ a{
     border: 2px solid #60a100;
 }
 
-.users-form form input[type=submit]:hover {
+.products-form form input[type=submit]:hover {
     background-color: #60a100;
     color: white;
 }
-
-.users-table table{
+/* make this div scrollable for overflowing table */
+.products-table table{
     border: 1px solid #ccc;
     border-collapse: collapse;
     margin: 0;
@@ -306,14 +374,14 @@ table th{
     font-size: .85em;
 }
 
-.users-table--edit{
+.products-table--edit{
     background: #009688;
     padding: 6px;
     color: #fff;
     text-align: center;
     font-weight: bold;
 }
-.users-table--delete{
+.products-table--delete{
     background: #b11e1e;
     padding: 6px;
     color: #fff;

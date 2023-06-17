@@ -21,10 +21,9 @@ $query = mysqli_query($con, $sql);
 
     <header>
         <div class="container">
-            <p class="logo">Admon. de Productos</p>
+            <p class="logo">Admon. de Usuarios</p>
             <nav>
-
-                <a href="index.html">Home</a>
+                <a href="index.html">Home</a>           
                 <a href="productos.php">Admon. de productos</a>
                 <a href="ventas.php">Admon. de ventas</a>
                 <a href="clientes.php">Admon. de clientes</a>
@@ -36,21 +35,19 @@ $query = mysqli_query($con, $sql);
         </div>
     </header>
 
-    <section id="hero-prods">
-        <h1>Administracion<br>de productos</h1>
+    <section id="hero-usrs">
+        <h1>Seccion en construccion<br>disculpe las molestias...</h1>
 
-        <form action="#Crud">
+        <form action="index.html">
             <button>Continuar</button>
         </form>
     </section>
 
-    <section id="Crud">
+    <!-- <section id="Crud">
         <div class="container">
         </div>
         <div class="products-form">
-            <br>
-            <br>
-            <h2>Agregar Productos</h2>
+            <h1>Administracion de productos</h1>
             <br>
             <br>
             <br>
@@ -102,7 +99,7 @@ $query = mysqli_query($con, $sql);
             </table>
         </div>
 
-    </section>
+    </section> -->
 
 </body>
 
