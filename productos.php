@@ -55,10 +55,10 @@ $query = mysqli_query($con, $sql);
             <br>
             <br>
             <form action="insert_product.php" method="POST">
-                <input type="text" name="nombre" placeholder="nombre">
-                <input type="text" name="marca" placeholder="marca">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="marca" placeholder="Marca">
                 <input type="text" name="descripcion" placeholder="Descripcion">
-                <input type="text" name="costo"  placeholder="costo">
+                <input type="number" name="costo"  placeholder="Costo">
 
                 <select id="stock" name="stock">
                     <option value="">Seleccione una opción...</option>
@@ -77,10 +77,10 @@ $query = mysqli_query($con, $sql);
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Email</th>
+                        <th>Marca</th>
+                        <th>Descripcion</th>
+                        <th>Costo</th>
+                        <th>Stock</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -95,7 +95,7 @@ $query = mysqli_query($con, $sql);
                             <th><?= $row['costo'] ?></th>
                             <th><?= $row['stock'] ?></th>
                             <th><a href="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
-                            <th><a href="delete_user.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
+                            <th><a href="delete_product.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

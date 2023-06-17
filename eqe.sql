@@ -20,7 +20,7 @@ CREATE DATABASE eqe;
 DROP USER IF EXISTS 'invitado'@'localhost';
 CREATE USER 'invitado'@'localhost' IDENTIFIED BY 'invitado';
 GRANT ALL PRIVILEGES ON *.* TO 'invitado'@'localhost';
-FLUSH PRIVILEGES;
+
 
 USE eqe;
 

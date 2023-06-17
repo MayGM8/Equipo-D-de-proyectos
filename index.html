@@ -10,7 +10,7 @@ $query = mysqli_query($con, $sql);
 <html lang="en">
 <head>
     <title>Tienda de Regalos</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
@@ -22,7 +22,7 @@ $query = mysqli_query($con, $sql);
                     <a href="ventas.php">Admon. de ventas</a>
                     <a href="clientes.php">Admon. de clientes</a>
                     <a href="usuarios.php">Admon. de usuarios</a>
-                    <a href="#a-trabajar">Comenzemos</a>
+                    <a href="#Funciones">Comenzemos</a>
                     <a href="#Integrantes">Integrantes</a>
             
             </nav>
@@ -40,8 +40,8 @@ $query = mysqli_query($con, $sql);
       <div class="container">
         <div class="img-container"></div>
         <div class="texto">
-        <h2>¿Para que sirve este <span class="color-acento"> panel?</span></h2>
-        <p>Contar con un sistema de inventarios para manejar existencias de los diversos artículos y controlar su salida a través de un punto de venta. Se contempla la necesidad de validar pedidos con un sistema de apartado y los abonos realizados a una orden de apartados.</p>
+        <h2>Para que sirve este <span class="color-acento"> panel?</span></h2>
+        <p>Contar con un sistema de inventarios para manejar existencias de los diversos articulos y controlar su salida a traves de un punto de venta. Se contempla la necesidad de validar pedidos con un sistema de apartado y los abonos realizados a una orden de apartados.</p>
         </div>
       </div>
     </section>
@@ -53,29 +53,29 @@ $query = mysqli_query($con, $sql);
         <div class="funciones2">
         <div class="carta">
             <h3>Administrar Productos</h3>
-            <p>En esta sección se podrán dar de alta los nuevos productos, así como modificar los datos de cada producto, agregar stock y eliminar el producto.</p>
+            <p>En esta seccion se podran dar de alta los nuevos productos, asi como modificar los datos de cada producto, agregar stock y eliminar el producto.</p>
             <form action="productos.php">
                <button>continuar</button>
             </form>
         </div>
         <div class="carta">
             <h3>Administrar Venta</h3>
-            <p>En este apartado se generará, modificará y cancelará la venta.</p>
-            <form action="poner link">
+            <p>En este apartado se generara, modificara y cancelara la venta.</p>
+            <form action="ventas.php">
                 <button>continuar</button>
             </form>
         </div>
         <div class="carta">
             <h3>Administrar Clientes</h3>
-            <p>Aquí se dará de alta el cliente nuevo, podrá modificar sus datos y eliminar su cuenta o consultar sus apartados.</p>
-            <form action="poner link">
+            <p>Aqui se dara de alta el cliente nuevo, podra modificar sus datos y eliminar su cuenta o consultar sus apartados.</p>
+            <form action="clientes.php">
                 <button>continuar</button>
             </form>
         </div>
         <div class="carta">
             <h3>Administrar Empleado</h3>
-            <p>En esta sección se dará de alta y baja a los empleados.</p>
-            <form action="poner link">
+            <p>En esta seccion se dara de alta y baja a los empleados.</p>
+            <form action="ponerlink">
                 <button>continuar</button>
             </form>
         </div>

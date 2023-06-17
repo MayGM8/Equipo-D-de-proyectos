@@ -89,7 +89,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/pc.jpg");
+    ,url("../img/pc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -107,7 +107,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/prods.jpg");
+    ,url("../img/prods.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -124,7 +124,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/under-construction.webp");
+    ,url("../img/under-construction.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -141,7 +141,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/caja.jpg");
+    ,url("../img/caja.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -158,7 +158,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/under-construction.webp");
+    ,url("../img/under-construction.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -215,7 +215,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/producto.jpg");
+    ,url("../img/producto.jpg");
 }
 
 .carta:nth-child(2){
@@ -224,7 +224,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/clientes.jpg");
+    ,url("../img/clientes.jpg");
 }
 
 .carta:nth-child(3){
@@ -233,7 +233,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/ventas.jpg");
+    ,url("../img/ventas.jpg");
 }
 
 .carta:nth-child(4){
@@ -242,7 +242,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("img/trabajador.jpg");
+    ,url("../img/trabajador.jpg");
 }
 
 #Integrantes .container{
@@ -290,7 +290,7 @@ footer .container{
     justify-content: center;
     align-items: flex-end;
 }
-
+/*////////////////////////////////////*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -388,6 +388,7 @@ table th{
     text-align: center;
     font-weight: bold;
 }
+/*////////////////////////////////////*/
 
 @media (min-width: 850px){
 
@@ -437,7 +438,7 @@ table th{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/Panel.jpg");
+        ,url("../img/Panel.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -473,7 +474,7 @@ table th{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/producto.jpg");
+        ,url("../img/producto.jpg");
     }
 
     .carta:nth-child(2){
@@ -482,7 +483,7 @@ table th{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/clientes.jpg");
+        ,url("../img/clientes.jpg");
     }
 
     .carta:nth-child(3){
@@ -491,7 +492,7 @@ table th{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/ventas.jpg");
+        ,url("../img/ventas.jpg");
     }
 
     .carta:nth-child(4){
@@ -500,11 +501,11 @@ table th{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("img/trabajador.jpg");
+        ,url("../img/trabajador.jpg");
     }
 
     #Integrantes{
-        background-image: url("img/integrantes.jpg");
+        background-image: url("../img/integrantes.jpg");
         background-repeat: no-repeat;
         background-size: 500px 400px;
         background-position: calc(100vw - 500px) 120px;
