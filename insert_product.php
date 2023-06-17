@@ -2,11 +2,11 @@
 include("connection.php");
 $con = connection();
 
-$name = $_POST['nombre'];
-$lastname = $_POST['marca'];
+$nombre = $_POST['nombre'];
+$marca = $_POST['marca'];
 $descripcion = $_POST['descripcion'];
-$password = $_POST['costo'];
-$email = $_POST['stock'];
+$costo = $_POST['costo'];
+$stock = $_POST['stock'];
 
 /*    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(50),
@@ -15,11 +15,11 @@ $email = $_POST['stock'];
     costo DECIMAL(10,2)
     stock ENUM ('disponible', 'agotado')*/
 
-$sql = "INSERT INTO products VALUES('$nombre','$lastname','$username','$password','$email')";
+$sql = "INSERT INTO producto VALUES('$nombre','$marca','$descripcion','$costo','$stock')";
 $query = mysqli_query($con, $sql);
 
 if($query){
-    Header("Location: index.php");
+    Header("Location: index.html");
 }else{
 
 }
