@@ -1,24 +1,36 @@
 /*
-Equipo E 
-        Integrantes                         Coevaluacion
-    * Jimenez Valenzuela Guillermo             1
-    * Mendoza Lozano Mauricio                  1
-    * Ornelas Garcia Israel Fernando           1
-    * Gomez Medina Maydelin Lucero             1
+---------------------------------------------------------------------------------------------------------------------
+********************************  DISEÑO DE PROYECTOS DE SISTEMAS DE INFORMATICOS - 5CV80  *********************************
+*********************  UNIDAD PROFESIONAL DE INGENIERIA Y CIENCIAS SOCIALES Y ADMINISTRATIVAS - UPIICSA|  *******************
+                                    =====================>|| Equipo E ||<=======================
+---------------------------------------------------------------------------------------------------------------------                                    
+        Integrantes                     ||    Coevaluacion
+-----------------------------------------------------------------------------------------------------------------------
+    * Jimenez Valenzuela Guillermo      ||      1
+    * Mendoza Lozano Mauricio           ||      1
+    * Ornelas Garcia Israel Fernando    ||      1
+    * Gomez Medina Maydelin Lucero      ||      1
 
-
+----------------------------------------------------------------------------------------------------------------------
 */
-
-
+DROP DATABASE IF EXISTS eqe;
 CREATE DATABASE eqe;
+
+
+DROP USER IF EXISTS 'invitado'@'localhost';
+CREATE USER 'invitado'@'localhost' IDENTIFIED BY 'invitado';
+GRANT ALL PRIVILEGES ON *.* TO 'invitado'@'localhost';
+FLUSH PRIVILEGES;
+
 USE eqe;
+
 -- Tabla "Producto"
 CREATE TABLE Producto (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(50),
     marca VARCHAR(150),
     descripcion TEXT,
-    costo DECIMAL(10,2)
+    costo DECIMAL(10,2),    
     stock ENUM ('disponible', 'agotado')
 );
 
@@ -81,23 +93,23 @@ VALUES
     ('Tarjeta de credito', 1, 150.50),
     ('Efectivo', 2, 75.25),
     ('Transferencia bancaria', 3, 200.00),
-    ('Tarjeta de debito', 4, 50.75),
+    ('Tarjeta de debito', 3, 50.75),
     ('Efectivo', 2, 120.00),
     ('Tarjeta de credito', 3, 90.50),
-    ('Transferencia bancaria', 4, 180.75),
-    ('Efectivo', 4, 300.00),
-    ('Tarjeta de debito', 4, 75.25),
-    ('Tarjeta de credito', 3, 110.00),
+    ('Transferencia bancaria', 2, 180.75),
+    ('Efectivo', 2, 300.00),
+    ('Tarjeta de debito', 3, 75.25),
+    ('Tarjeta de credito', 4, 110.00),
     ('Transferencia bancaria', 2, 250.50),
-    ('Efectivo', 4, 80.25),
+    ('Efectivo', 1, 80.25),
     ('Tarjeta de debito', 1, 160.00),
-    ('Tarjeta de credito', 4, 40.50),
+    ('Tarjeta de credito', 3, 40.50),
     ('Efectivo', 2, 95.75),
-    ('Transferencia bancaria', 4, 210.00),
-    ('Tarjeta de debito', 4, 55.25),
+    ('Transferencia bancaria', 2, 210.00),
+    ('Tarjeta de debito', 1, 55.25),
     ('Tarjeta de credito', 2, 130.00),
     ('Efectivo', 2, 220.50),
-    ('Transferencia bancaria', 5, 65.25);
+    ('Transferencia bancaria', 4, 65.25);
 
 -- Tabla "Cliente"
 CREATE TABLE Cliente (
@@ -180,7 +192,6 @@ CREATE TABLE prod_apartado (
     id_producto INT,
     id_apartado INT,
     FOREIGN KEY (id_producto) REFERENCES Producto(id),
-    FOREIGN KEY (id_venta) REFERENCES Venta(id)
+    FOREIGN KEY (id_apartado) REFERENCES Apartado(id)
 );
-
 

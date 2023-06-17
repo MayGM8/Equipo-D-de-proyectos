@@ -2,10 +2,10 @@
 
 function connection(){
     $host = "localhost";
-    $user = "root";
-    $pass = "";
+    $user = "invitado";
+    $pass = "invitado";
 
-    $bd = "producto";
+    $bd = "eqe";
 
     $connect=mysqli_connect($host, $user, $pass);
 

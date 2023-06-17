@@ -2,7 +2,7 @@
 include("connection.php");
 $con = connection();
 
-$sql = "SELECT * FROM producto";
+$sql = "SELECT * FROM Producto";
 $query = mysqli_query($con, $sql);
 ?>
 
