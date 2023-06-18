@@ -28,7 +28,7 @@
                 <input type="text" name="descripcion" placeholder="Descripcion" value="<?= $row['descripcion']?>">
                 <input type="number" name="costo" placeholder="Costo" value="<?= $row['costo']?>">
                 <select id="stock" name="stock">
-                    <option disabled selected hidden value="<?= $row['costo']?>"><?= $row['stock']?></option>
+                    <option disabled selected hidden value="<?= $row['stock']?>"><?= $row['stock']?></option>
                     <option value="disponible">Disponible</option>
                     <option value="agotado">Agotado</option>
                 </select>

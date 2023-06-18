@@ -37,7 +37,7 @@ if (count($errors) === 0) {
     $query = mysqli_query($con, $sql);
 
     if ($query) {
-        Header("Location: productos.php");
+        Header("Location: productos.php?#Crud");
     } else {
         // Error al ejecutar la consulta
     }
