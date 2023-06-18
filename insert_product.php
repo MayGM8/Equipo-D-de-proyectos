@@ -44,7 +44,7 @@ if (!empty($errors)) {
 }
 
 // Realizar la inserción en la base de datos
-$sql = "INSERT INTO producto VALUES('$id','$nombre','$marca','$descripcion','$costo','$stock')";
+$sql = "INSERT INTO Producto (nombre, marca, descripcion, costo, stock) VALUES('$nombre','$marca','$descripcion',$costo,'$stock')";
 $query = mysqli_query($con, $sql);
 
 if ($query) {

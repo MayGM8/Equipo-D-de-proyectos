@@ -2,7 +2,7 @@
 include("connection.php");
 $con = connection();
 
-$sql = "SELECT * FROM Producto";
+$sql = "SELECT * FROM eqe.Producto WHERE status_prod = 'activo'";
 $query = mysqli_query($con, $sql);
 ?>
 
@@ -18,7 +18,6 @@ $query = mysqli_query($con, $sql);
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <p class="logo">Admon. de Productos</p>
@@ -55,7 +54,7 @@ $query = mysqli_query($con, $sql);
                 <input type="text" name="nombre" placeholder="Nombre">
                 <input type="text" name="marca" placeholder="Marca">
                 <input type="text" name="descripcion" placeholder="Descripcion">
-                <input type="number" name="costo"  placeholder="Costo">
+                <input type="number" name="costo"  step=".01" max="999.99" placeholder="000.00">
 
                 <select id="stock" name="stock">
                     <option value="">Seleccione una opción...</option>

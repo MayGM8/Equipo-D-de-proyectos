@@ -2,10 +2,12 @@
 include("connection.php");
 $con = connection();
 
-$sql = "SELECT *
-        FROM prod_venta pv
-        INNER JOIN Producto p ON pv.id_producto = p.id
-        INNER JOIN Venta v ON pv.id_venta = v.id";
+$sql = "SELECT v.id, v.total, p.nombre, p.costo 
+    FROM eqe.Venta AS v, eqe.Producto AS p 
+    INNER JOIN eqe.prod_venta AS pv 
+        ON pv.id_producto = p.id 
+    WHERE pv.id_venta = $id;";
+    
 $query = mysqli_query($con, $sql);
 ?>
 
@@ -34,7 +36,7 @@ $query = mysqli_query($con, $sql);
     </header>
 
     <section id="hero-prod-venta">
-        <h1>Productos<br>en Venta</h1>
+        <h1>Productos<br>en venta id </h1>
         <form action="#ProductosVenta">
             <button>Continuar</button>
         </form>
@@ -44,7 +46,7 @@ $query = mysqli_query($con, $sql);
         <div class="container">
         </div>
         <div class="products-table">
-            <h2>Productos en Venta</h2>
+            <h2>Productos de la Venta</h2>
             <table>
                 <thead>
                     <tr>

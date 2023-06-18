@@ -20,6 +20,7 @@ CREATE DATABASE eqe;
 DROP USER IF EXISTS 'invitado'@'localhost';
 CREATE USER 'invitado'@'localhost' IDENTIFIED BY 'invitado';
 GRANT ALL PRIVILEGES ON *.* TO 'invitado'@'localhost';
+FLUSH PRIVILEGES;
 
 
 USE eqe;
@@ -30,8 +31,10 @@ CREATE TABLE Producto (
     nombre VARCHAR(50),
     marca VARCHAR(150),
     descripcion TEXT,
-    costo DECIMAL(10,2),    
-    stock ENUM ('disponible', 'agotado')
+    costo FLOAT(10,2),    
+    stock ENUM ('disponible', 'agotado'),
+    status_prod ENUM ('activo', 'eliminado') DEFAULT 'activo'
+    
 );
 
 INSERT INTO eqe.Producto (nombre, marca, descripcion, costo, stock)
@@ -184,7 +187,12 @@ CREATE TABLE prod_venta (
     FOREIGN KEY (id_venta) REFERENCES Venta(id)
 );
 
-
+INSERT INTO prod_venta (id_producto, id_venta)
+VALUES (1,1),
+        (20,1),
+        (10,1),
+        (15,1),
+        (5,1);
 
 -- Tabla "prod_venta"
 CREATE TABLE prod_apartado (
