@@ -15,7 +15,7 @@ $sql="UPDATE producto SET nombre='$nombre', marca='$marca', descripcion='$descri
 $query = mysqli_query($con, $sql);
 
 if($query){
-    Header("Location: productos.php?#Crud");
+    Header("Location: productos.php");
 }else{
 
 }
