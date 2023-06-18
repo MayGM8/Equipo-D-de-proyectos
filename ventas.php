@@ -2,7 +2,11 @@
 include("connection.php");
 $con = connection();
 
-$sql = "SELECT * FROM Producto";
+$sql = "SELECT v.id, v.forma_pago, u.nombre, v.total 
+    FROM eqe.Venta AS v 
+    LEFT JOIN eqe.Usuario AS u 
+        ON v.id_usuario = u.id;";
+
 $query = mysqli_query($con, $sql);
 ?>
 
@@ -44,6 +48,7 @@ $query = mysqli_query($con, $sql);
         <div class="container">
         </div>
         <div class="products-form">
+            <br>
             <h2>Administracion de Ventas</h2>
             <br>
             <br>
@@ -69,27 +74,21 @@ $query = mysqli_query($con, $sql);
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Email</th>
-                        <th></th>
-                        <th></th>
+                        <th>No. Venta</th>
+                        <th>Forma de pago</th>
+                        <th>Vendedor</th>
+                        <th>Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while ($row = mysqli_fetch_array($query)): ?>
                         <tr>
                             <th><?= $row['id'] ?></th>
+                            <th><?= $row['forma_pago'] ?></th>
                             <th><?= $row['nombre'] ?></th>
-                            <th><?= $row['marca'] ?></th>
-                            <th><?= $row['descripcion'] ?></th>
-                            <th><?= $row['costo'] ?></th>
-                            <th><?= $row['stock'] ?></th>
-                            <th><a href="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
-                            <th><a href="delete_product.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
+                            <th><?= $row['total'] ?></th>
+                            <th><a href="prod_venta.php?id=<?= $row['id'] ?>" class="products-table--edit">Ver</a></th>
+                            <th><a href="delete_venta.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

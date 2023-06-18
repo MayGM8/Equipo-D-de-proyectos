@@ -76,7 +76,7 @@ CREATE TABLE Usuario (
 
 INSERT INTO eqe.Usuario (nombre, telefono, rol)
 VALUES 
-    ('Juan Perez', '555-1234', 'Administrador'),
+    ('Invitado', '555-1234', 'Administrador'),
     ('María García', '555-5678', 'Usuario'),
     ('Luis Hernandez', '555-9012', 'Usuario'),
     ('Lucía Rodríguez', '555-2345', 'Usuario');
@@ -183,16 +183,17 @@ CREATE TABLE prod_venta (
     no_ticket INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     id_producto INT,
     id_venta INT,
+    cantidad INT,
     FOREIGN KEY (id_producto) REFERENCES Producto(id),
     FOREIGN KEY (id_venta) REFERENCES Venta(id)
 );
 
-INSERT INTO prod_venta (id_producto, id_venta)
-VALUES (1,1),
-        (20,1),
-        (10,1),
-        (15,1),
-        (5,1);
+INSERT INTO prod_venta (id_producto, id_venta, cantidad)
+VALUES (1,1,1),
+        (20,1,1),
+        (10,1,2),
+        (15,1,1),
+        (5,1,4);
 
 -- Tabla "prod_venta"
 CREATE TABLE prod_apartado (

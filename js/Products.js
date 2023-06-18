@@ -11,4 +11,3 @@ MyFunction(data);{
     xhttp.send();
     
 };
-∫∫
