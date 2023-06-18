@@ -28,14 +28,12 @@ $query = mysqli_query($con, $sql);
                 <a href="ventas.php">Admon. de ventas</a>
                 <a href="clientes.php">Admon. de clientes</a>
                 <a href="usuarios.php">Admon. de usuarios</a>
-                <a href="#a-trabajar">Comenzemos</a>
-                <a href="#Integrantes">Integrantes</a>
             
             </nav>
         </div>
     </header>
 
-    <section id="hero-prods">
+    <section id="hero-venta">
         <h1>Administracion<br>de Ventas</h1>
         <form action="#Crud">
             <button>Continuar</button>

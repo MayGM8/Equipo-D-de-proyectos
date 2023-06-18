@@ -112,6 +112,23 @@ header a:hover{
     background-size: cover;
     background-position: center center;
 }
+#hero-venta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/ventas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 #hero-usrs{
     display: flex;
     align-items: center;
