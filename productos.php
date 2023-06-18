@@ -92,7 +92,7 @@ $query = mysqli_query($con, $sql);
                             <th><?= $row['costo'] ?></th>
                             <th><?= $row['stock'] ?></th>
                             <!-- Open this php file as a pop up window -->
-                            <th><a href+="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
+                            <th><a href="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
                             <th><a href="delete_product.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
                         </tr>
                     <?php endwhile; ?>
