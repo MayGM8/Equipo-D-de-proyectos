@@ -2,7 +2,6 @@
 include("connection.php");
 $con = connection();
 
-$id = null;
 $nombre = $_POST['nombre'];
 $marca = $_POST['marca'];
 $descripcion = $_POST['descripcion'];
@@ -16,11 +15,11 @@ $stock = $_POST['stock'];
     costo DECIMAL(10,2)
     stock ENUM ('disponible', 'agotado')*/
 
-$sql = "INSERT INTO producto VALUES('$id','$nombre','$marca','$descripcion','$costo','$stock')";
+$sql = "INSERT INTO Producto VALUES('$nombre','$marca','$descripcion','$costo','$stock')";
 $query = mysqli_query($con, $sql);
 
 if($query){
-    Header("Location: index.html");
+    Header("Location: ./productos.php?#Crud");
 }else{
 
 }

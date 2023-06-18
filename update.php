@@ -15,7 +15,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="estilos.css" rel="stylesheet">
+        <link href="./css/estilos.css" rel="stylesheet">
         <title>Editar producto</title>
         
     </head>
@@ -28,7 +28,7 @@
                 <input type="text" name="descripcion" placeholder="Descripcion" value="<?= $row['descripcion']?>">
                 <input type="number" name="costo" placeholder="Costo" value="<?= $row['costo']?>">
                 <select id="stock" name="stock">
-                    <option value="">Seleccione una opción...</option>
+                    <option disabled selected hidden value="<?= $row['costo']?>"><?= $row['stock']?></option>
                     <option value="disponible">Disponible</option>
                     <option value="agotado">Agotado</option>
                 </select>

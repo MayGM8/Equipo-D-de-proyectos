@@ -13,7 +13,7 @@ $query = mysqli_query($con, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="estilos.css" rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
     <title>Users CRUD</title>
 </head>
 
@@ -28,8 +28,6 @@ $query = mysqli_query($con, $sql);
                 <a href="ventas.php">Admon. de ventas</a>
                 <a href="clientes.php">Admon. de clientes</a>
                 <a href="usuarios.php">Admon. de usuarios</a>
-                <a href="#a-trabajar">Comenzemos</a>
-                <a href="#Integrantes">Integrantes</a>
             
             </nav>
         </div>

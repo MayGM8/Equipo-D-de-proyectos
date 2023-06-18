@@ -13,7 +13,7 @@ $query = mysqli_query($con, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/estilos.css" rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
     <title>Users CRUD</title>
 </head>
 
@@ -23,14 +23,11 @@ $query = mysqli_query($con, $sql);
         <div class="container">
             <p class="logo">Admon. de Productos</p>
             <nav>
-
                 <a href="index.html">Home</a>
                 <a href="productos.php">Admon. de productos</a>
                 <a href="ventas.php">Admon. de ventas</a>
                 <a href="clientes.php">Admon. de clientes</a>
                 <a href="usuarios.php">Admon. de usuarios</a>
-                <a href="#a-trabajar">Comenzemos</a>
-                <a href="#Integrantes">Integrantes</a>
             
             </nav>
         </div>
@@ -94,7 +91,8 @@ $query = mysqli_query($con, $sql);
                             <th><?= $row['descripcion'] ?></th>
                             <th><?= $row['costo'] ?></th>
                             <th><?= $row['stock'] ?></th>
-                            <th><a href="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
+                            <!-- Open this php file as a pop up window -->
+                            <th><a href+="update.php?id=<?= $row['id'] ?>" class="products-table--edit">Editar</a></th>
                             <th><a href="delete_product.php?id=<?= $row['id'] ?>" class="products-table--delete" >Eliminar</a></th>
                         </tr>
                     <?php endwhile; ?>
@@ -107,3 +105,5 @@ $query = mysqli_query($con, $sql);
 </body>
 
 </html>
+
+<script src="./js/Products.js"></script>
