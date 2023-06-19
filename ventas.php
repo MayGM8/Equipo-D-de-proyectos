@@ -139,6 +139,19 @@ $query = mysqli_query($con, $sql);
 
     </section>
     
+    <script>
+    <?php if (isset($_GET['errors'])): ?>
+    // Obtener los mensajes de error del parámetro 'errors' en la URL
+    var errors = <?php echo $_GET['errors']; ?>;
+    
+    // Mostrar los mensajes de error en una ventana emergente
+    Object.keys(errors).forEach(function (key) {
+        var errorMessage = errors[key];
+        alert(errorMessage);
+    });
+    <?php endif; ?>
+</script>
+    
     <script src="./js/Venta.js"></script>
 </body>
 
