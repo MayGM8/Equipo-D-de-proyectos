@@ -10,8 +10,8 @@ $total = $_POST['total'];
 $errors = array();
 
 
-if (empty($id_usuario)) {
-    $id_usuario = 1;
+if (empty($nombre)) {
+    $errors['forma_pago'] = "El campo 'Forma de pago' es requerido.";
 }
 
 // Verificar si hay errores de validación
