@@ -24,15 +24,15 @@ if (!empty($errors)) {
 }
 
 // Realizar la inserción en la base de datos
-$sql = "INSERT INTO Venta (forma_pago, id_usuario, total) VALUES('$forma_pago',$id_usuario,$total)";
+$sql = "INSERT INTO Venta (forma_pago, id_usuario, total) VALUES('$forma_pago','$id_usuario','$total')";
 $query = mysqli_query($con, $sql);
 
 if ($query) {
     // Redirigir a la página de productos con un mensaje de éxito
-    header("Location: productos.php?success=Producto agregado correctamente");
+    header("Location: ventas.php?success=Venta agregada correctamente");
 } else {
     // Error en la consulta SQL
     // Redirigir a la página de productos con un mensaje de error
-    header("Location: productos.php?error=Error al agregar el producto");
+    header("Location: ventas.php?error=Error al agregar la venta");
 }
 ?>

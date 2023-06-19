@@ -32,6 +32,9 @@ $query2 = mysqli_query($con, $sql2);
 </head>
 <body>
     <section id="ProductosVenta">
+        <br>
+        <a href="ventas.php?#Crud">Volver</a>
+        <br>
         <div class="container">
         </div>
         <div class="products-table">

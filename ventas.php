@@ -6,7 +6,9 @@ $sql = "SELECT v.id, v.forma_pago, u.nombre, v.total
     FROM eqe.Venta AS v 
     LEFT JOIN eqe.Usuario AS u 
         ON v.id_usuario = u.id;";
+$sql2 = "SELECT id, nombre, costo FROM eqe.Producto;";
 
+$query2 = mysqli_query($con, $sql2);
 $query = mysqli_query($con, $sql);
 ?>
 
@@ -49,28 +51,68 @@ $query = mysqli_query($con, $sql);
         </div>
         <div class="products-form">
             <br>
-            <h2>Administracion de Ventas</h2>
+            <h2>Registrar Venta</h2>
             <br>
             <br>
-            <br>
-            <form action="insert_product.php" method="POST">
-                <input type="text" name="nombre" placeholder="nombre">
-                <input type="text" name="marca" placeholder="marca">
-                <input type="text" name="descripcion" placeholder="Descripcion">
-                <input type="text" name="costo"  placeholder="costo">
+            <table id="tablaProductosVenta">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                <select id="stock" name="stock">
-                    <option value="">Seleccione una opción...</option>
-                    <option value="disponible">Disponible</option>
-                    <option value="agotado">Agotado</option>
+                </tbody>
+            </table>
+            <br>
+            
+            <form action="insert_venta.php" method="POST">
+
+                <label for="total">Total</label>
+                <input id="total" type="text" readonly value="">
+                
+                <select id="forma_pago" name="forma_pago">
+                    <option value="">Seleccione forma de pago</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarjeta de credito">Tarjeta de credito</option>
+                    <option value="Tarjeta de debito">Tarjeta de debito</option>
+                    <option value="Transferencia bancaria">Transferencia bancaria</option>
                 </select>
+                <label for="id_usuario">Usuario Predeterminado</label>
+                <input id="id_usuario" type="text" readonly value="1">
 
-                <input type="submit" value="Agregar">
+                <input type="submit" value="Finalizar Venta">
             </form>
+
+            <div id="tablaProductos">
+                <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Producto</th>
+                        <th>costo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = mysqli_fetch_array($query2)): ?>
+                        <tr>
+                            <th><?= $row['id'] ?></th>
+                            <th><?= $row['nombre'] ?></th>
+                            <th><?= $row['costo'] ?></th>
+                            <th><a href="#Crud" onclick="addProduct(<?= $row['id'] ?>,<?= $row['costo'] ?>,'<?= $row['nombre'] ?>' )" class="products-table--edit">+</a></th>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+                </table>
+            </div>
+
         </div>
 
-        <div class="products-table">
-            <h2>Productos Registrados</h2>
+        <div class="products-table"> 
+            <h2>Ventas Registradas</h2>
             <table>
                 <thead>
                     <tr>
@@ -96,7 +138,8 @@ $query = mysqli_query($con, $sql);
         </div>
 
     </section>
-
+    
+    <script src="./js/Venta.js"></script>
 </body>
 
 </html>
